@@ -1,7 +1,7 @@
 " Searches for the given pattern (which may be a list).
 function! ydict#search(pattern) abort
   let title = type(a:pattern) == type([]) ? a:pattern[0] : a:pattern
-  call ydict#execute(ydict#command(a:pattern), title)
+  call ydict#execute(ydict#command(title), title)
 endfunction
 
 " Runs the given shell command.  If it exits with a nonzero status, waits for
